@@ -1,15 +1,16 @@
-﻿using Tyuiu.KovalenkoMA.Sprint1.Task3.V5.Lib;
+﻿using Tyuiu.KovalenkoMA.Sprint1.Task4.V8.Lib;
 internal class Program
 {
     private static void Main(string[] args)
     {
         DataService ds = new DataService();
+
         Console.Title = "Спринт #1 | Выполнила: Коваленко М. А. | ПИНб-25-1";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #1                                                               *");
         Console.WriteLine("* Тема: Базовые навыки работы в C#                                        *");
-        Console.WriteLine("* Задание #1                                                              *");
-        Console.WriteLine("* Вариант #29                                                             *");
+        Console.WriteLine("* Задание #4                                                              *");
+        Console.WriteLine("* Вариант #8                                                             *");
         Console.WriteLine("* Выполнила: Коваленко М. А. | ПИНб-25-1                                  *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
@@ -20,19 +21,18 @@ internal class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        double a, b;
-        Console.WriteLine("Введите значение масштаба карты:");
-        a = Convert.ToDouble(Console.ReadLine());
+        double x, y;
+        Console.WriteLine("Введите значение X:");
+        x = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Введите значение расстояния м/у точками изображающими населённые пункты :");
-        b = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Введите значение Y:");
+        y = Convert.ToDouble(Console.ReadLine());
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
-        Console.WriteLine(Math.Round(ds.DistanceLength(a, b),3));
+        Console.WriteLine(Math.Round(ds.Calculate(x,y), 3));
         Console.ReadKey();
-
     }
 }
